@@ -1,0 +1,193 @@
+def ts(content):
+    text = ""
+    if "ts" in content:
+        a_ts = content.split("ts")
+        b = "ц".join(a_ts)
+        text += b
+    else:
+        return content
+    return text
+
+
+def yj(content):
+    text = ""
+    if "yj" in content:
+        a_yj = content.split("yj")
+        b = "и".join(a_yj)
+        text += b
+    else:
+        return content
+    return text
+
+
+def yi(content):
+    text = ""
+    if "yi" in content:
+        a_yi = content.split("yi")
+        b = "ї".join(a_yi)
+        text += b
+    else:
+        return content
+    return text
+
+
+def zh(content):
+    text = ""
+    if "zh" in content:
+        a_zh = content.split("zh")
+        b = "ж".join(a_zh)
+        text += b
+    else:
+        return content
+    return text
+
+
+def ye(content):
+    text = ""
+    if "ye" in content:
+        a_ye = content.split("ye")
+        b = "є".join(a_ye)
+        text += b
+    else:
+        return content
+    return text
+
+
+def ya(content):
+    text = ""
+    if "ya" in content:
+        a_ya = content.split("ya")
+        b = "я".join(a_ya)
+        text += b
+    else:
+        return content
+    return text
+
+
+def ch(content):
+    text = ""
+    if "ch" in content:
+        a_ch = content.split("ch")
+        b = "ч".join(a_ch)
+        text += b
+    else:
+        return content
+    return text
+
+
+def yu(content):
+    text = ""
+    if "yu" in content:
+        a_yu = content.split("yu")
+        b = "ю".join(a_yu)
+        text += b
+    else:
+        return content
+    return text
+
+
+def transliteration(content):
+    simple = ""
+    for x in content:
+        if x == "j":
+            simple += "й"
+        elif x == "и":
+            simple += "ий"
+        elif x == "ц":
+            simple += "ц"
+        elif x == "u":
+            simple += "у"
+        elif x == "k":
+            simple += "к"
+        elif x == "e":
+            simple += "е"
+        elif x == "n":
+            simple += "н"
+        elif x == "g":
+            simple += "г"
+        elif x == "w":
+            simple += "ш"
+        elif x == "q":
+            simple += "щ"
+        elif x == "z":
+            simple += "з"
+        elif x == "h":
+            simple += "х"
+        elif x == "ї":
+            simple += "ї"
+        elif x == "f":
+            simple += "ф"
+        elif x == "i":
+            simple += "і"
+        elif x == "v":
+            simple += "в"
+        elif x == "a":
+            simple += "а"
+        elif x == "p":
+            simple += "п"
+        elif x == "r":
+            simple += "р"
+        elif x == "o":
+            simple += "о"
+        elif x == "l":
+            simple += "л"
+        elif x == "d":
+            simple += "д"
+        elif x == "ж":
+            simple += "ж"
+        elif x == "є":
+            simple += "є"
+        elif x == "я":
+            simple += "я"
+        elif x == "ч":
+            simple += "ч"
+        elif x == "s":
+            simple += "с"
+        elif x == "m":
+            simple += "м"
+        elif x == "y":
+            simple += "и"
+        elif x == "t":
+            simple += "т"
+        elif x == "/":
+            simple += "ь"
+        elif x == "b":
+            simple += "б"
+        elif x == "ю":
+            simple += "ю"
+        elif x == " ":
+            simple += " "
+        elif x == "'":
+            simple += "'"
+        elif x == ".":
+            simple += "."
+        elif x == ",":
+            simple += ","
+        elif x == ":":
+            simple += ":"
+        elif x == "x":
+            simple += ")"
+        elif x == "c":
+            simple += "("
+        elif x == "?":
+            simple += "?"
+        elif x == "`":
+            simple += "`"
+    return simple
+
+
+def big(content):
+    text = ""
+    if "`" in content:
+        a_big = content.split("`")
+        text += a_big[0]
+        for i in a_big[1:]:
+            text += " "
+            text += i.capitalize()
+    else:
+        return content
+    return text
+
+
+a = big(transliteration(yu(ch(ya(ye(zh(yi(yj(ts(input(">>> ")))))))))))
+print(a)
